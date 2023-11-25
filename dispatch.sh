@@ -27,21 +27,26 @@ cd /app
 
 heading "installing dependinces"
 go mod init dispatch &>> ${logfile}
-# go get  &>> ${logfile}
-# go build &>> ${logfile}
-# status $?
+if [ $? -eq 1 ] 
+then 
+    echo "already exist"
+fi
+go get  &>> ${logfile}
+status $?
+go build &>> ${logfile}
+status $?
 
-# heading "coping dispatch service file "
-# cp ${codedir}/configs/dispatch.service /etc/systemd/system/dispatch.service &>> ${logfile}
-# status $?
+heading "coping dispatch service file "
+cp ${codedir}/configs/dispatch.service /etc/systemd/system/dispatch.service &>> ${logfile}
+status $?
 
-# heading "daemon reload"
-# systemctl daemon-reload &>> ${logfile}
-# status $?
+heading "daemon reload"
+systemctl daemon-reload &>> ${logfile}
+status $?
 
-# heading "enabling dispatch"
-# systemctl enable dispatch &>> ${logfile}
-# status $?
+heading "enabling dispatch"
+systemctl enable dispatch &>> ${logfile}
+status $?
 
 # heading "starting dispatch"
 # systemctl start dispatch &>> ${logfile}

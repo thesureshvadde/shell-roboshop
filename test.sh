@@ -1,2 +1,0 @@
-codedir=$(pwd)
-echo "${codedir}"

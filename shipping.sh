@@ -52,7 +52,7 @@ yum install mysql -y  &>> ${logfile}
 status $?
 
 heading "loading schema"
-mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -pRoboShop@1 < /app/schema/shipping.sql  &>> ${logfile}
+mysql -h mysql.sureshdevops.online -uroot -pRoboShop@1 < /app/schema/shipping.sql  &>> ${logfile}
 status $?
 
 heading "restarting shipping"

@@ -20,7 +20,8 @@ status $?
 cd /app 
 
 heading "unzip dispatch.zip"
-unzip /tmp/dispatch.zip -y &>> ${logfile}
+unzip /tmp/dispatch.zip &>> ${logfile}
+y
 status $?
 
 cd /app

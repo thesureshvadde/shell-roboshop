@@ -21,7 +21,6 @@ cd /app
 
 heading "unzip dispatch.zip"
 unzip /tmp/dispatch.zip &>> ${logfile}
-y
 status $?
 
 cd /app

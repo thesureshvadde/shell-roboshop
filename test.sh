@@ -1,1 +1,2 @@
-echo "hello world"
+codedir=(pwd)
+echo "${codedir}"

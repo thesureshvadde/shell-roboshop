@@ -19,7 +19,7 @@ status $?
 
 cd /app 
 
-heading "unzip dispatch.zip"catalogue
+heading "unzip dispatch.zip"
 unzip /tmp/dispatch.zip &>> ${logfile}
 status $?
 

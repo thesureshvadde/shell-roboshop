@@ -1,2 +1,2 @@
-codedir=(pwd)
+codedir=$(pwd)
 echo "${codedir}"

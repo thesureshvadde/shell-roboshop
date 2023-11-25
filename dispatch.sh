@@ -7,7 +7,7 @@ status $?
 
 heading "creating roboshop application user"
 userstatus
-status $?
+
 
 heading "creating /app directory"
 appstatus

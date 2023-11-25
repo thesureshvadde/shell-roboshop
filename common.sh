@@ -13,6 +13,7 @@ userstatus(){
         echo -e "\e[32m user already exist \e[0m"
     else
         useradd roboshop &>> ${logfile}   
+        status $?
     fi
 }
 
@@ -31,7 +32,7 @@ status(){
     then
         echo -e "\e[32m success \e[0m"
     else
-        echo "\e[31m failure \e[0m"
+        echo -e "\e[31m failure \e[0m"
         exit 1
     fi
 }

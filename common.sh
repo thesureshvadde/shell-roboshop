@@ -8,7 +8,7 @@ heading(){
 
 userstatus(){
     id roboshop &>> ${logfile}
-    if [ $? -eq 9 ]
+    if [ $? -eq 0 ]
     then
         echo -e "\e[32m user already exist \e[0m"
     else

@@ -6,11 +6,11 @@ yum install python36 gcc python3-devel -y &>> ${logfile}
 status $?
 
 heading "creating roboshop application user"
-useradd roboshop &>> ${logfile}
+userstatus
 status $?
 
 heading "creating /app directory"
-mkdir /app &>> ${logfile}
+appstatus
 status $?
 
 heading "downloading payment app content"

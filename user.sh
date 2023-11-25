@@ -10,11 +10,11 @@ yum install nodejs -y &>> ${logfile}
 status $?
 
 heading "creating roboshop application user"
-useradd roboshop &>> ${logfile}
+userstatus
 status $?
 
 heading "creating /app directory"
-mkdir /app &>> ${logfile}
+appstatus
 status $?
 
 heading "downloading user app content"

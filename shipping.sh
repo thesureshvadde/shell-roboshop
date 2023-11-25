@@ -6,11 +6,11 @@ yum install maven -y &>> ${logfile}
 status $?
 
 heading "creating roboshop application user"
-useradd roboshop &>> ${logfile}
+userstatus
 status $?
 
 heading "creating /app directory"
-mkdir /app &>> ${logfile}
+appstatus
 status $?
 
 heading "downloading shipping app content"

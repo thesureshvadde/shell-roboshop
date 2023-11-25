@@ -6,11 +6,11 @@ yum install golang -y &>> ${logfile}
 status $?
 
 heading "creating roboshop application user"
-useradd roboshop &>> ${logfile}
+userstatus
 status $?
 
 heading "creating /app directory"
-mkdir /app &>> ${logfile}
+appstatus
 status $?
 
 heading "downloading dispatch app content"
@@ -27,22 +27,22 @@ cd /app
 
 heading "installing dependinces"
 go mod init dispatch &>> ${logfile}
-go get  &>> ${logfile}
-go build &>> ${logfile}
-status $?
+# go get  &>> ${logfile}
+# go build &>> ${logfile}
+# status $?
 
-heading "coping dispatch service file "
-cp ${codedir}/configs/dispatch.service /etc/systemd/system/dispatch.service &>> ${logfile}
-status $?
+# heading "coping dispatch service file "
+# cp ${codedir}/configs/dispatch.service /etc/systemd/system/dispatch.service &>> ${logfile}
+# status $?
 
-heading "daemon reload"
-systemctl daemon-reload &>> ${logfile}
-status $?
+# heading "daemon reload"
+# systemctl daemon-reload &>> ${logfile}
+# status $?
 
-heading "enabling dispatch"
-systemctl enable dispatch &>> ${logfile}
-status $?
+# heading "enabling dispatch"
+# systemctl enable dispatch &>> ${logfile}
+# status $?
 
-heading "starting dispatch"
-systemctl start dispatch &>> ${logfile}
-status $?
+# heading "starting dispatch"
+# systemctl start dispatch &>> ${logfile}
+# status $?

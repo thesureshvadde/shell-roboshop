@@ -13,5 +13,5 @@ status(){
     else
         echo "failure"
         exit 1
-    if
+    fi
 }
